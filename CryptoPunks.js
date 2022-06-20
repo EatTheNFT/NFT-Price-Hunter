@@ -40,7 +40,6 @@ const bot = async () => {
             details.minValue = ethers.utils.formatEther(element.minValue), // Parse 10**18 BigNumber to decimal (human readable ether value)
             details.onlySellTo = element.onlySellTo, // Reserved sale(sell to address) or free sale (sell to address 0x00)
             imputs.push(details) // push above details into imputs and display them into console, only if the token id is true (active) for sale 
-            console.log([i])
             if(element.isForSale === true){ //Display only active sales
                 console.log(imputs);
                 if(element.onlySellTo === FreeForEveryone){
