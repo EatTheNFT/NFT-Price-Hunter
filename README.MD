@@ -59,5 +59,9 @@ buyPunk ([i] actual token ID found in console, that meets all of these 3 conditi
 Then value: element.minValue ( The real price of tokenID, not your max value )
 If someone, by a mistake, puts the value for 8 ether instead of 80, this script will buy Crypto Punk listed for 8 ether.
 
+# Contribute
+
+0x0468C8d4e517C37267aA1DbF307350FFC996CBcB
+
 ## Have Fun hunting prices!!
 
