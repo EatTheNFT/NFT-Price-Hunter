@@ -4,6 +4,9 @@ First script from this collection is looking for Crypto Punks prices
 
 # How to use
 
+Personal Recomandation: Use this script only inside Remix, if will throw any error, it doesen't have a restart parameter for node.js or any other command console.
+Inside Remix, it will run even if it throws an error
+
 Open remix.ethereum.org
 Go to folder scripts
 Create a file "CryptoPunks.js" or any other name, with .js extension
