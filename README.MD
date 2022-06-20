@@ -64,7 +64,7 @@ If someone, by a mistake, puts the value for 8 ether instead of 80, this script 
 
 # Contribute
 
-0x0468C8d4e517C37267aA1DbF307350FFC996CBcB
+0x0468C8d4e517C37267aA1DbF307350FFC996CBcB ETH/BSC/AVAX/POLYGON
 
 ## Have Fun hunting prices!!
 
