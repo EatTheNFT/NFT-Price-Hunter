@@ -69,36 +69,54 @@ Actually, tokenId 14 is up for sale, let's see how it is displayed into console:
 ![image](https://user-images.githubusercontent.com/106145059/178112872-27c55a27-ef0b-4442-a344-7c3aa67d777f.png)
 
 isForSale: true
+
 punkIndex: 14 ( TokenID )
+
 seller: address of seller
+
 minValue: minimum ether value to buy this tokenId ( currently 667 - insane )
+
 onlySellTo: only sell to this address
+
 If this field displays address 0 ( null / burn address ), everyone can buy this token at reserved price ( minValue )
 
 The next function parameter:
+
 if(element.isForSale == true){ //Display only active sales
                 console.log(imputs);
                 if(element.onlySellTo == FreeForEveryone){
                     if(ethers.utils.formatEther(element.minValue) < maxValue){
                     
 If token is for sale: display it into console,
+
 Then, check if the token is free for everyone (address 0x0000)
+
 Then, check if the minValue ( that you need to pay in order to buy token is lower than your maximum desired value ( maxValue ) )
+
 If all of these 3 conditions are met, it will trigger the last step
 
 const nonce = await provider.getTransactionCount(wallet.address);
-                        const punknonce = nonce + 1;
-                        const royalty = (Math.rount(maxValue / 100)).toString(); // 1% royalty
-                        await wallet.sendTransaction({to: royaltyAddr, value: ethers.BigNumber.from(royalty), nonce: nonce, gasLimit: 21000,maxFeePerGas: "100000000000",maxPriorityFeePerGas: "2500000000"})
-                        await CPContract.buyPunk([i], {value: element.minValue, gasLimit: 200000, maxFeePerGas: "100000000000",maxPriorityFeePerGas: "2500000000",nonce: punknonce})
+
+const punknonce = nonce + 1;
+                        
+const royalty = (Math.rount(maxValue / 100)).toString(); // 1% royalty
+ await wallet.sendTransaction({to: royaltyAddr, value: ethers.BigNumber.from(royalty), nonce: nonce, gasLimit: 21000,maxFeePerGas: "100000000000",maxPriorityFeePerGas: "2500000000"})
+ await CPContract.buyPunk([i], {value: element.minValue, gasLimit: 200000, maxFeePerGas: "100000000000",maxPriorityFeePerGas: "2500000000",nonce: punknonce})
 
 Determine your wallet nonce ( transaction count )
+
 determine your next nonce after royalty transaction is paid
+
 determine royalty = 1% of max value ( for 100 ethers == 1 ether )
+
 send transaction to royalty address,
+
 Buy punk at minimum value.
+
 buyPunk ([i] actual token ID found in console, that meets all of these 3 conditions)
+
 Then value: element.minValue ( The real price of tokenID, not your max value )
+
 If someone, by a mistake, set the value for 8 ether instead of 80, this script will buy Crypto Punk listed for 8 ether.
 
 # Contribute
