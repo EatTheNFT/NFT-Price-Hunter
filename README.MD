@@ -35,25 +35,37 @@ node Drag&drop CryptoPunks.js inside command prompt(instead of manual writing lo
 # Initialize script
 
 Submit your wallet private key const xpriv = "" ( in order to connect with contract and track prices )
+
 Submit your provider API key ( infura/alchemy/etherscan or any other ethereum provider, recommended to use a known and suitable provider ) const provider = "" 
+
 Submit the value you desire to buy a crypto punk, It is preset at 50 ethers
+
 Const maxValue = 50 // If you want to look for max 70 ether or max 30 ether, replace 50 with your desired number
 
 # Script explained
 
 We will step over the "initialize script" topic, where it is explained the basics of the script
+
 Let's decode the function bot();
+
 It will count, starting with 0 to 10.000
+
 The imput number ( [i] ) is the token ID
+
 When i = 10.000 it will start a new loop from 0 to 10.000 and stop current counter.
+
 The max tokenId number in Crypto Punks collection is 9999, so, we don't need to track anything above or equal to 10.000
 
 await CPContract.punksOfferedForSale([i].toString()).then(async (element)
 
 This function will search for tokenID based on [i] value ( 0,1,2,....9999 )
+
 This parameter will return the token ID sale state
+
 In the console.log will be printed only token id's that are up for sale ( true parameter in the smart contract )
+
 Actually, tokenId 14 is up for sale, let's see how it is displayed into console:
+
 ![image](https://user-images.githubusercontent.com/106145059/178112872-27c55a27-ef0b-4442-a344-7c3aa67d777f.png)
 
 isForSale: true
