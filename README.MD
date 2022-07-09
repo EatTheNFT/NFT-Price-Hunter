@@ -8,18 +8,28 @@ Personal Recomandation: Use this script only inside Node.js , inside Remix will 
 
 # For remix usage:
 Open remix.ethereum.org
+
 Go to folder scripts
+
 Create a file "CryptoPunks.js" or any other name, with .js extension
+
 Paste the script inside
+
 Follow #Initialize Script steps
 
 # For Node.js usage:
 Download node.js from : https://nodejs.org/en/
+
 Download Visual Studio Code: https://code.visualstudio.com/
+
 Install ethers: npm install ethers ( you need to have ethers.js library installed in order to interact with blockchain via this script )
+
 Inside Visual Studio Code create a file CryptoPunks.js and copy-paste this script > File > Save
+
 Right click CryptoPunks.js > Reveal in File Explorer
+
 Open node.js command prompt
+
 node Drag&drop CryptoPunks.js inside command prompt(instead of manual writing location) & Hit enter 
 
 # Initialize script
