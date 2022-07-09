@@ -6,12 +6,21 @@ First script from this collection is looking for Crypto Punks prices
 
 Personal Recomandation: Use this script only inside Node.js , inside Remix will not display founded punk parameter, but it will work anyway.
 
-For remix:
+# For remix usage:
 Open remix.ethereum.org
 Go to folder scripts
 Create a file "CryptoPunks.js" or any other name, with .js extension
 Paste the script inside
 Follow #Initialize Script steps
+
+# For Node.js usage:
+Download node.js from : https://nodejs.org/en/
+Download Visual Studio Code: https://code.visualstudio.com/
+Install ethers: npm install ethers ( you need to have ethers.js library installed in order to interact with blockchain via this script )
+Inside Visual Studio Code create a file CryptoPunks.js and copy-paste this script > File > Save
+Right click CryptoPunks.js > Reveal in File Explorer
+Open node.js command prompt
+node Drag&drop CryptoPunks.js inside command prompt(instead of manual writing location) & Hit enter 
 
 # Initialize script
 
@@ -35,7 +44,7 @@ This function will search for tokenID based on [i] value ( 0,1,2,....9999 )
 This parameter will return the token ID sale state
 In the console.log will be printed only token id's that are up for sale ( true parameter in the smart contract )
 Actually, tokenId 14 is up for sale, let's see how it is displayed into console:
-![image](https://user-images.githubusercontent.com/106145059/174594815-b720d1d4-d491-4b44-a20c-b78c38d41b76.png)
+![image](https://user-images.githubusercontent.com/106145059/178112872-27c55a27-ef0b-4442-a344-7c3aa67d777f.png)
 
 isForSale: true
 punkIndex: 14 ( TokenID )
