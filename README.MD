@@ -30,7 +30,7 @@ Right click CryptoPunks.js > Reveal in File Explorer
 
 Open node.js command prompt
 
-write node then Drag&drop CryptoPunks.js inside command prompt(instead of manual writing location) & Hit enter 
+Write "node" then Drag&drop CryptoPunks.js inside command prompt(instead of manual writing location) & Hit enter 
 
 # Initialize script
 
